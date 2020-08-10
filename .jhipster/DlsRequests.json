@@ -1,0 +1,118 @@
+{
+    "name": "DlsRequests",
+    "fields": [
+        {
+            "fieldName": "transactionType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "licenseCategory",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "requestNo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "exported",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "familyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "middleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nationalId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "passportIssueCountry",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "passportKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trafficUnitCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "licenceExpiryDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "licenceTypeAr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "licenceTypeEn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "licenceStatusAr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "licenceStatusEn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "licenceStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "applicantId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "centerId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200810113434",
+    "entityTableName": "dls_requests",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "aman-mockup-ms",
+    "applications": "*",
+    "microserviceName": "amanMockupMs"
+}
