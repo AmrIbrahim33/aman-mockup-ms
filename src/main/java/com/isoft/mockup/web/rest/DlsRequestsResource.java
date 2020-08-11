@@ -1,6 +1,7 @@
 package com.isoft.mockup.web.rest;
 
 import com.isoft.mockup.service.DlsRequestsService;
+import com.isoft.mockup.service.dto.InquireExamEligibilityResponse;
 import com.isoft.mockup.web.rest.errors.BadRequestAlertException;
 import com.isoft.mockup.service.dto.DlsRequestsDTO;
 import com.isoft.mockup.service.dto.DlsRequestsCriteria;
@@ -20,7 +21,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -58,7 +58,7 @@ public class DlsRequestsResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("/dls-requests")
-    public ResponseEntity<DlsRequestsDTO> createDlsRequests(@Valid @RequestBody DlsRequestsDTO dlsRequestsDTO) throws URISyntaxException {
+    public ResponseEntity<DlsRequestsDTO> createDlsRequests(@RequestBody DlsRequestsDTO dlsRequestsDTO) throws URISyntaxException {
         log.debug("REST request to save DlsRequests : {}", dlsRequestsDTO);
         if (dlsRequestsDTO.getId() != null) {
             throw new BadRequestAlertException("A new dlsRequests cannot already have an ID", ENTITY_NAME, "idexists");
@@ -79,7 +79,7 @@ public class DlsRequestsResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/dls-requests")
-    public ResponseEntity<DlsRequestsDTO> updateDlsRequests(@Valid @RequestBody DlsRequestsDTO dlsRequestsDTO) throws URISyntaxException {
+    public ResponseEntity<DlsRequestsDTO> updateDlsRequests(@RequestBody DlsRequestsDTO dlsRequestsDTO) throws URISyntaxException {
         log.debug("REST request to update DlsRequests : {}", dlsRequestsDTO);
         if (dlsRequestsDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
@@ -143,5 +143,12 @@ public class DlsRequestsResource {
         log.debug("REST request to delete DlsRequests : {}", id);
         dlsRequestsService.delete(id);
         return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+    }
+
+    @GetMapping("/inquiry/{requestId}")
+    public ResponseEntity<InquireExamEligibilityResponse> Inquiry(@PathVariable Long requestId) {
+        log.debug("REST request to get InquireExamEligibilityResponse : {}", requestId);
+        InquireExamEligibilityResponse response = dlsRequestsService.inquiry(requestId);
+        return ResponseEntity.ok(response);
     }
 }

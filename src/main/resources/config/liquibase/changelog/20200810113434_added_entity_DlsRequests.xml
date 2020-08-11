@@ -15,73 +15,37 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="transaction_type" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="license_category" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="request_no" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="exported" type="boolean">
-                <constraints nullable="true" />
-            </column>
-            <column name="family_name" type="varchar(255)">
+            <column name="request_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <column name="first_name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="last_name" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="middle_name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="full_name" type="varchar(255)">
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="family_name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="national_id" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="passport_no" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="passport_issue_country" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="passport_key" type="varchar(255)">
+            <column name="license_type" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="traffic_unit_code" type="varchar(255)">
+            <column name="traffic_unit" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="birth_date" type="date">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_expiry_date" type="date">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_type_ar" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_type_en" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_status_ar" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_status_en" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="licence_status" type="integer">
-                <constraints nullable="true" />
-            </column>
-            <column name="applicant_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-            <column name="user_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-            <column name="center_id" type="bigint">
+            <column name="birth_date" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
@@ -107,29 +71,17 @@
                   separator=";"
                   tableName="dls_requests">
             <column name="id" type="numeric"/>
-            <column name="transaction_type" type="string"/>
-            <column name="license_category" type="string"/>
-            <column name="request_no" type="string"/>
-            <column name="exported" type="boolean"/>
-            <column name="family_name" type="string"/>
+            <column name="request_id" type="numeric"/>
             <column name="first_name" type="string"/>
-            <column name="last_name" type="string"/>
             <column name="middle_name" type="string"/>
-            <column name="full_name" type="string"/>
+            <column name="last_name" type="string"/>
+            <column name="family_name" type="string"/>
             <column name="national_id" type="string"/>
+            <column name="passport_no" type="string"/>
             <column name="passport_issue_country" type="string"/>
-            <column name="passport_key" type="string"/>
-            <column name="traffic_unit_code" type="string"/>
-            <column name="birth_date" type="date"/>
-            <column name="licence_expiry_date" type="date"/>
-            <column name="licence_type_ar" type="string"/>
-            <column name="licence_type_en" type="string"/>
-            <column name="licence_status_ar" type="string"/>
-            <column name="licence_status_en" type="string"/>
-            <column name="licence_status" type="numeric"/>
-            <column name="applicant_id" type="numeric"/>
-            <column name="user_id" type="numeric"/>
-            <column name="center_id" type="numeric"/>
+            <column name="license_type" type="string"/>
+            <column name="traffic_unit" type="string"/>
+            <column name="birth_date" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>
     </changeSet>

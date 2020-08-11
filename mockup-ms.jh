@@ -1,30 +1,16 @@
 entity DlsRequests {
-  transactionType String required,
-  licenseCategory String required,
-  requestNo String required,
-  exported Boolean,
-  familyName String,
+  requestID Long,
   firstName String,
-  lastName String,
   middleName String,
-  fullName String,
-  nationalId String,
+  lastName String,
+  familyName String,
+  nationalID String,
+  passportNo String,
   passportIssueCountry String,
-  passportKey String,
-  trafficUnitCode String,
-  birthDate LocalDate,
-  licenceExpiryDate LocalDate,
-  licenceTypeAr String,
-  licenceTypeEn String,
-  licenceStatusAr String,
-  licenceStatusEn String,
-  licenceStatus Integer,
-  applicantId Long,
-  userId Long,
-  centerId Long
-  statusAr String,
-  statusEn String,
-  status Integer
+  licenseType String,
+  trafficUnit String,
+  birthDate String,
+  queueNumber String
 }
 
 paginate all with pagination

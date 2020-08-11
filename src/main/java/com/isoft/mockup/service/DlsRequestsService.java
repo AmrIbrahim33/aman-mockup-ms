@@ -2,6 +2,7 @@ package com.isoft.mockup.service;
 
 import com.isoft.mockup.service.dto.DlsRequestsDTO;
 
+import com.isoft.mockup.service.dto.InquireExamEligibilityResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -43,4 +44,6 @@ public interface DlsRequestsService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+    InquireExamEligibilityResponse inquiry(Long requestId);
 }

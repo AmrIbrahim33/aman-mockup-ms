@@ -2,40 +2,11 @@
     "name": "DlsRequests",
     "fields": [
         {
-            "fieldName": "transactionType",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "licenseCategory",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "requestNo",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "exported",
-            "fieldType": "Boolean"
-        },
-        {
-            "fieldName": "familyName",
-            "fieldType": "String"
+            "fieldName": "requestID",
+            "fieldType": "Long"
         },
         {
             "fieldName": "firstName",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "lastName",
             "fieldType": "String"
         },
         {
@@ -43,11 +14,19 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "fullName",
+            "fieldName": "lastName",
             "fieldType": "String"
         },
         {
-            "fieldName": "nationalId",
+            "fieldName": "familyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nationalID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "passportNo",
             "fieldType": "String"
         },
         {
@@ -55,52 +34,16 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "passportKey",
+            "fieldName": "licenseType",
             "fieldType": "String"
         },
         {
-            "fieldName": "trafficUnitCode",
+            "fieldName": "trafficUnit",
             "fieldType": "String"
         },
         {
             "fieldName": "birthDate",
-            "fieldType": "LocalDate"
-        },
-        {
-            "fieldName": "licenceExpiryDate",
-            "fieldType": "LocalDate"
-        },
-        {
-            "fieldName": "licenceTypeAr",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "licenceTypeEn",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "licenceStatusAr",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "licenceStatusEn",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "licenceStatus",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "applicantId",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "centerId",
-            "fieldType": "Long"
         }
     ],
     "relationships": [],

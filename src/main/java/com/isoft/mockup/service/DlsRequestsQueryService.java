@@ -91,74 +91,38 @@ public class DlsRequestsQueryService extends QueryService<DlsRequests> {
             if (criteria.getId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getId(), DlsRequests_.id));
             }
-            if (criteria.getTransactionType() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getTransactionType(), DlsRequests_.transactionType));
-            }
-            if (criteria.getLicenseCategory() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLicenseCategory(), DlsRequests_.licenseCategory));
-            }
-            if (criteria.getRequestNo() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getRequestNo(), DlsRequests_.requestNo));
-            }
-            if (criteria.getExported() != null) {
-                specification = specification.and(buildSpecification(criteria.getExported(), DlsRequests_.exported));
-            }
-            if (criteria.getFamilyName() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getFamilyName(), DlsRequests_.familyName));
+            if (criteria.getRequestID() != null) {
+                specification = specification.and(buildRangeSpecification(criteria.getRequestID(), DlsRequests_.requestID));
             }
             if (criteria.getFirstName() != null) {
                 specification = specification.and(buildStringSpecification(criteria.getFirstName(), DlsRequests_.firstName));
             }
-            if (criteria.getLastName() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLastName(), DlsRequests_.lastName));
-            }
             if (criteria.getMiddleName() != null) {
                 specification = specification.and(buildStringSpecification(criteria.getMiddleName(), DlsRequests_.middleName));
             }
-            if (criteria.getFullName() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getFullName(), DlsRequests_.fullName));
+            if (criteria.getLastName() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getLastName(), DlsRequests_.lastName));
             }
-            if (criteria.getNationalId() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getNationalId(), DlsRequests_.nationalId));
+            if (criteria.getFamilyName() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getFamilyName(), DlsRequests_.familyName));
+            }
+            if (criteria.getNationalID() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getNationalID(), DlsRequests_.nationalID));
+            }
+            if (criteria.getPassportNo() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getPassportNo(), DlsRequests_.passportNo));
             }
             if (criteria.getPassportIssueCountry() != null) {
                 specification = specification.and(buildStringSpecification(criteria.getPassportIssueCountry(), DlsRequests_.passportIssueCountry));
             }
-            if (criteria.getPassportKey() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getPassportKey(), DlsRequests_.passportKey));
+            if (criteria.getLicenseType() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getLicenseType(), DlsRequests_.licenseType));
             }
-            if (criteria.getTrafficUnitCode() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getTrafficUnitCode(), DlsRequests_.trafficUnitCode));
+            if (criteria.getTrafficUnit() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getTrafficUnit(), DlsRequests_.trafficUnit));
             }
             if (criteria.getBirthDate() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getBirthDate(), DlsRequests_.birthDate));
-            }
-            if (criteria.getLicenceExpiryDate() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getLicenceExpiryDate(), DlsRequests_.licenceExpiryDate));
-            }
-            if (criteria.getLicenceTypeAr() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLicenceTypeAr(), DlsRequests_.licenceTypeAr));
-            }
-            if (criteria.getLicenceTypeEn() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLicenceTypeEn(), DlsRequests_.licenceTypeEn));
-            }
-            if (criteria.getLicenceStatusAr() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLicenceStatusAr(), DlsRequests_.licenceStatusAr));
-            }
-            if (criteria.getLicenceStatusEn() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getLicenceStatusEn(), DlsRequests_.licenceStatusEn));
-            }
-            if (criteria.getLicenceStatus() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getLicenceStatus(), DlsRequests_.licenceStatus));
-            }
-            if (criteria.getApplicantId() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getApplicantId(), DlsRequests_.applicantId));
-            }
-            if (criteria.getUserId() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getUserId(), DlsRequests_.userId));
-            }
-            if (criteria.getCenterId() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getCenterId(), DlsRequests_.centerId));
+                specification = specification.and(buildStringSpecification(criteria.getBirthDate(), DlsRequests_.birthDate));
             }
         }
         return specification;

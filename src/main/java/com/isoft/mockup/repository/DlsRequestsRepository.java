@@ -12,4 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DlsRequestsRepository extends JpaRepository<DlsRequests, Long>, JpaSpecificationExecutor<DlsRequests> {
 
+    DlsRequests findByRequestID(Long requestId);
+
 }

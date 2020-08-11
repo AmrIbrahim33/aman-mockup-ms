@@ -1,50 +1,52 @@
 package com.isoft.mockup.service.dto;
-import java.io.Serializable;
-import java.util.Objects;
 
-/**
- * A DTO for the {@link com.isoft.mockup.domain.DlsRequests} entity.
- */
-public class DlsRequestsDTO implements Serializable {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    private Long id;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class InquireExamEligibilityResponseDetails {
 
-    private Long requestID;
+    @JsonProperty("requestID")
+    private long requestID;
 
+    @JsonProperty("fName")
     private String firstName;
 
+    @JsonProperty("mName")
     private String middleName;
 
+    @JsonProperty("lName")
     private String lastName;
 
+    @JsonProperty("exName")
     private String familyName;
 
+    @JsonProperty("nationalID")
     private String nationalID;
 
+    @JsonProperty("passportNo")
     private String passportNo;
 
+    @JsonProperty("passportIssueCountry")
     private String passportIssueCountry;
 
+    @JsonProperty("licenseType")
     private String licenseType;
 
+    @JsonProperty("trafficUnit")
     private String trafficUnit;
 
+    @JsonProperty("birthDate")
     private String birthDate;
 
+    @JsonProperty("queueNumber")
+    private String queueNumber;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getRequestID() {
+    public long getRequestID() {
         return requestID;
     }
 
-    public void setRequestID(Long requestID) {
+    public void setRequestID(long requestID) {
         this.requestID = requestID;
     }
 
@@ -128,42 +130,29 @@ public class DlsRequestsDTO implements Serializable {
         this.birthDate = birthDate;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        DlsRequestsDTO dlsRequestsDTO = (DlsRequestsDTO) o;
-        if (dlsRequestsDTO.getId() == null || getId() == null) {
-            return false;
-        }
-        return Objects.equals(getId(), dlsRequestsDTO.getId());
+    public String getQueueNumber() {
+        return queueNumber;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(getId());
+    public void setQueueNumber(String queueNumber) {
+        this.queueNumber = queueNumber;
     }
 
     @Override
     public String toString() {
-        return "DlsRequestsDTO{" +
-            "id=" + getId() +
-            ", requestID=" + getRequestID() +
-            ", firstName='" + getFirstName() + "'" +
-            ", middleName='" + getMiddleName() + "'" +
-            ", lastName='" + getLastName() + "'" +
-            ", familyName='" + getFamilyName() + "'" +
-            ", nationalID='" + getNationalID() + "'" +
-            ", passportNo='" + getPassportNo() + "'" +
-            ", passportIssueCountry='" + getPassportIssueCountry() + "'" +
-            ", licenseType='" + getLicenseType() + "'" +
-            ", trafficUnit='" + getTrafficUnit() + "'" +
-            ", birthDate='" + getBirthDate() + "'" +
-            "}";
+        return "InquireExamEligibilityResponseDetails{" +
+            "requestID=" + requestID +
+            ", firstName='" + firstName + '\'' +
+            ", middleName='" + middleName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", familyName='" + familyName + '\'' +
+            ", nationalID='" + nationalID + '\'' +
+            ", passportNo='" + passportNo + '\'' +
+            ", passportIssueCountry='" + passportIssueCountry + '\'' +
+            ", licenseType='" + licenseType + '\'' +
+            ", trafficUnit='" + trafficUnit + '\'' +
+            ", birthDate='" + birthDate + '\'' +
+            ", queueNumber='" + queueNumber + '\'' +
+            '}';
     }
 }

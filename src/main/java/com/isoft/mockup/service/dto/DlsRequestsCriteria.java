@@ -10,7 +10,6 @@ import io.github.jhipster.service.filter.FloatFilter;
 import io.github.jhipster.service.filter.IntegerFilter;
 import io.github.jhipster.service.filter.LongFilter;
 import io.github.jhipster.service.filter.StringFilter;
-import io.github.jhipster.service.filter.LocalDateFilter;
 
 /**
  * Criteria class for the {@link com.isoft.mockup.domain.DlsRequests} entity. This class is used
@@ -27,80 +26,44 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
 
     private LongFilter id;
 
-    private StringFilter transactionType;
-
-    private StringFilter licenseCategory;
-
-    private StringFilter requestNo;
-
-    private BooleanFilter exported;
-
-    private StringFilter familyName;
+    private LongFilter requestID;
 
     private StringFilter firstName;
 
-    private StringFilter lastName;
-
     private StringFilter middleName;
 
-    private StringFilter fullName;
+    private StringFilter lastName;
 
-    private StringFilter nationalId;
+    private StringFilter familyName;
+
+    private StringFilter nationalID;
+
+    private StringFilter passportNo;
 
     private StringFilter passportIssueCountry;
 
-    private StringFilter passportKey;
+    private StringFilter licenseType;
 
-    private StringFilter trafficUnitCode;
+    private StringFilter trafficUnit;
 
-    private LocalDateFilter birthDate;
-
-    private LocalDateFilter licenceExpiryDate;
-
-    private StringFilter licenceTypeAr;
-
-    private StringFilter licenceTypeEn;
-
-    private StringFilter licenceStatusAr;
-
-    private StringFilter licenceStatusEn;
-
-    private IntegerFilter licenceStatus;
-
-    private LongFilter applicantId;
-
-    private LongFilter userId;
-
-    private LongFilter centerId;
+    private StringFilter birthDate;
 
     public DlsRequestsCriteria(){
     }
 
     public DlsRequestsCriteria(DlsRequestsCriteria other){
         this.id = other.id == null ? null : other.id.copy();
-        this.transactionType = other.transactionType == null ? null : other.transactionType.copy();
-        this.licenseCategory = other.licenseCategory == null ? null : other.licenseCategory.copy();
-        this.requestNo = other.requestNo == null ? null : other.requestNo.copy();
-        this.exported = other.exported == null ? null : other.exported.copy();
-        this.familyName = other.familyName == null ? null : other.familyName.copy();
+        this.requestID = other.requestID == null ? null : other.requestID.copy();
         this.firstName = other.firstName == null ? null : other.firstName.copy();
-        this.lastName = other.lastName == null ? null : other.lastName.copy();
         this.middleName = other.middleName == null ? null : other.middleName.copy();
-        this.fullName = other.fullName == null ? null : other.fullName.copy();
-        this.nationalId = other.nationalId == null ? null : other.nationalId.copy();
+        this.lastName = other.lastName == null ? null : other.lastName.copy();
+        this.familyName = other.familyName == null ? null : other.familyName.copy();
+        this.nationalID = other.nationalID == null ? null : other.nationalID.copy();
+        this.passportNo = other.passportNo == null ? null : other.passportNo.copy();
         this.passportIssueCountry = other.passportIssueCountry == null ? null : other.passportIssueCountry.copy();
-        this.passportKey = other.passportKey == null ? null : other.passportKey.copy();
-        this.trafficUnitCode = other.trafficUnitCode == null ? null : other.trafficUnitCode.copy();
+        this.licenseType = other.licenseType == null ? null : other.licenseType.copy();
+        this.trafficUnit = other.trafficUnit == null ? null : other.trafficUnit.copy();
         this.birthDate = other.birthDate == null ? null : other.birthDate.copy();
-        this.licenceExpiryDate = other.licenceExpiryDate == null ? null : other.licenceExpiryDate.copy();
-        this.licenceTypeAr = other.licenceTypeAr == null ? null : other.licenceTypeAr.copy();
-        this.licenceTypeEn = other.licenceTypeEn == null ? null : other.licenceTypeEn.copy();
-        this.licenceStatusAr = other.licenceStatusAr == null ? null : other.licenceStatusAr.copy();
-        this.licenceStatusEn = other.licenceStatusEn == null ? null : other.licenceStatusEn.copy();
-        this.licenceStatus = other.licenceStatus == null ? null : other.licenceStatus.copy();
-        this.applicantId = other.applicantId == null ? null : other.applicantId.copy();
-        this.userId = other.userId == null ? null : other.userId.copy();
-        this.centerId = other.centerId == null ? null : other.centerId.copy();
     }
 
     @Override
@@ -116,44 +79,12 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
         this.id = id;
     }
 
-    public StringFilter getTransactionType() {
-        return transactionType;
+    public LongFilter getRequestID() {
+        return requestID;
     }
 
-    public void setTransactionType(StringFilter transactionType) {
-        this.transactionType = transactionType;
-    }
-
-    public StringFilter getLicenseCategory() {
-        return licenseCategory;
-    }
-
-    public void setLicenseCategory(StringFilter licenseCategory) {
-        this.licenseCategory = licenseCategory;
-    }
-
-    public StringFilter getRequestNo() {
-        return requestNo;
-    }
-
-    public void setRequestNo(StringFilter requestNo) {
-        this.requestNo = requestNo;
-    }
-
-    public BooleanFilter getExported() {
-        return exported;
-    }
-
-    public void setExported(BooleanFilter exported) {
-        this.exported = exported;
-    }
-
-    public StringFilter getFamilyName() {
-        return familyName;
-    }
-
-    public void setFamilyName(StringFilter familyName) {
-        this.familyName = familyName;
+    public void setRequestID(LongFilter requestID) {
+        this.requestID = requestID;
     }
 
     public StringFilter getFirstName() {
@@ -164,14 +95,6 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
         this.firstName = firstName;
     }
 
-    public StringFilter getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(StringFilter lastName) {
-        this.lastName = lastName;
-    }
-
     public StringFilter getMiddleName() {
         return middleName;
     }
@@ -180,20 +103,36 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
         this.middleName = middleName;
     }
 
-    public StringFilter getFullName() {
-        return fullName;
+    public StringFilter getLastName() {
+        return lastName;
     }
 
-    public void setFullName(StringFilter fullName) {
-        this.fullName = fullName;
+    public void setLastName(StringFilter lastName) {
+        this.lastName = lastName;
     }
 
-    public StringFilter getNationalId() {
-        return nationalId;
+    public StringFilter getFamilyName() {
+        return familyName;
     }
 
-    public void setNationalId(StringFilter nationalId) {
-        this.nationalId = nationalId;
+    public void setFamilyName(StringFilter familyName) {
+        this.familyName = familyName;
+    }
+
+    public StringFilter getNationalID() {
+        return nationalID;
+    }
+
+    public void setNationalID(StringFilter nationalID) {
+        this.nationalID = nationalID;
+    }
+
+    public StringFilter getPassportNo() {
+        return passportNo;
+    }
+
+    public void setPassportNo(StringFilter passportNo) {
+        this.passportNo = passportNo;
     }
 
     public StringFilter getPassportIssueCountry() {
@@ -204,100 +143,28 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
         this.passportIssueCountry = passportIssueCountry;
     }
 
-    public StringFilter getPassportKey() {
-        return passportKey;
+    public StringFilter getLicenseType() {
+        return licenseType;
     }
 
-    public void setPassportKey(StringFilter passportKey) {
-        this.passportKey = passportKey;
+    public void setLicenseType(StringFilter licenseType) {
+        this.licenseType = licenseType;
     }
 
-    public StringFilter getTrafficUnitCode() {
-        return trafficUnitCode;
+    public StringFilter getTrafficUnit() {
+        return trafficUnit;
     }
 
-    public void setTrafficUnitCode(StringFilter trafficUnitCode) {
-        this.trafficUnitCode = trafficUnitCode;
+    public void setTrafficUnit(StringFilter trafficUnit) {
+        this.trafficUnit = trafficUnit;
     }
 
-    public LocalDateFilter getBirthDate() {
+    public StringFilter getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDateFilter birthDate) {
+    public void setBirthDate(StringFilter birthDate) {
         this.birthDate = birthDate;
-    }
-
-    public LocalDateFilter getLicenceExpiryDate() {
-        return licenceExpiryDate;
-    }
-
-    public void setLicenceExpiryDate(LocalDateFilter licenceExpiryDate) {
-        this.licenceExpiryDate = licenceExpiryDate;
-    }
-
-    public StringFilter getLicenceTypeAr() {
-        return licenceTypeAr;
-    }
-
-    public void setLicenceTypeAr(StringFilter licenceTypeAr) {
-        this.licenceTypeAr = licenceTypeAr;
-    }
-
-    public StringFilter getLicenceTypeEn() {
-        return licenceTypeEn;
-    }
-
-    public void setLicenceTypeEn(StringFilter licenceTypeEn) {
-        this.licenceTypeEn = licenceTypeEn;
-    }
-
-    public StringFilter getLicenceStatusAr() {
-        return licenceStatusAr;
-    }
-
-    public void setLicenceStatusAr(StringFilter licenceStatusAr) {
-        this.licenceStatusAr = licenceStatusAr;
-    }
-
-    public StringFilter getLicenceStatusEn() {
-        return licenceStatusEn;
-    }
-
-    public void setLicenceStatusEn(StringFilter licenceStatusEn) {
-        this.licenceStatusEn = licenceStatusEn;
-    }
-
-    public IntegerFilter getLicenceStatus() {
-        return licenceStatus;
-    }
-
-    public void setLicenceStatus(IntegerFilter licenceStatus) {
-        this.licenceStatus = licenceStatus;
-    }
-
-    public LongFilter getApplicantId() {
-        return applicantId;
-    }
-
-    public void setApplicantId(LongFilter applicantId) {
-        this.applicantId = applicantId;
-    }
-
-    public LongFilter getUserId() {
-        return userId;
-    }
-
-    public void setUserId(LongFilter userId) {
-        this.userId = userId;
-    }
-
-    public LongFilter getCenterId() {
-        return centerId;
-    }
-
-    public void setCenterId(LongFilter centerId) {
-        this.centerId = centerId;
     }
 
 
@@ -312,58 +179,34 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
         final DlsRequestsCriteria that = (DlsRequestsCriteria) o;
         return
             Objects.equals(id, that.id) &&
-            Objects.equals(transactionType, that.transactionType) &&
-            Objects.equals(licenseCategory, that.licenseCategory) &&
-            Objects.equals(requestNo, that.requestNo) &&
-            Objects.equals(exported, that.exported) &&
-            Objects.equals(familyName, that.familyName) &&
+            Objects.equals(requestID, that.requestID) &&
             Objects.equals(firstName, that.firstName) &&
-            Objects.equals(lastName, that.lastName) &&
             Objects.equals(middleName, that.middleName) &&
-            Objects.equals(fullName, that.fullName) &&
-            Objects.equals(nationalId, that.nationalId) &&
+            Objects.equals(lastName, that.lastName) &&
+            Objects.equals(familyName, that.familyName) &&
+            Objects.equals(nationalID, that.nationalID) &&
+            Objects.equals(passportNo, that.passportNo) &&
             Objects.equals(passportIssueCountry, that.passportIssueCountry) &&
-            Objects.equals(passportKey, that.passportKey) &&
-            Objects.equals(trafficUnitCode, that.trafficUnitCode) &&
-            Objects.equals(birthDate, that.birthDate) &&
-            Objects.equals(licenceExpiryDate, that.licenceExpiryDate) &&
-            Objects.equals(licenceTypeAr, that.licenceTypeAr) &&
-            Objects.equals(licenceTypeEn, that.licenceTypeEn) &&
-            Objects.equals(licenceStatusAr, that.licenceStatusAr) &&
-            Objects.equals(licenceStatusEn, that.licenceStatusEn) &&
-            Objects.equals(licenceStatus, that.licenceStatus) &&
-            Objects.equals(applicantId, that.applicantId) &&
-            Objects.equals(userId, that.userId) &&
-            Objects.equals(centerId, that.centerId);
+            Objects.equals(licenseType, that.licenseType) &&
+            Objects.equals(trafficUnit, that.trafficUnit) &&
+            Objects.equals(birthDate, that.birthDate);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(
         id,
-        transactionType,
-        licenseCategory,
-        requestNo,
-        exported,
-        familyName,
+        requestID,
         firstName,
-        lastName,
         middleName,
-        fullName,
-        nationalId,
+        lastName,
+        familyName,
+        nationalID,
+        passportNo,
         passportIssueCountry,
-        passportKey,
-        trafficUnitCode,
-        birthDate,
-        licenceExpiryDate,
-        licenceTypeAr,
-        licenceTypeEn,
-        licenceStatusAr,
-        licenceStatusEn,
-        licenceStatus,
-        applicantId,
-        userId,
-        centerId
+        licenseType,
+        trafficUnit,
+        birthDate
         );
     }
 
@@ -371,29 +214,17 @@ public class DlsRequestsCriteria implements Serializable, Criteria {
     public String toString() {
         return "DlsRequestsCriteria{" +
                 (id != null ? "id=" + id + ", " : "") +
-                (transactionType != null ? "transactionType=" + transactionType + ", " : "") +
-                (licenseCategory != null ? "licenseCategory=" + licenseCategory + ", " : "") +
-                (requestNo != null ? "requestNo=" + requestNo + ", " : "") +
-                (exported != null ? "exported=" + exported + ", " : "") +
-                (familyName != null ? "familyName=" + familyName + ", " : "") +
+                (requestID != null ? "requestID=" + requestID + ", " : "") +
                 (firstName != null ? "firstName=" + firstName + ", " : "") +
-                (lastName != null ? "lastName=" + lastName + ", " : "") +
                 (middleName != null ? "middleName=" + middleName + ", " : "") +
-                (fullName != null ? "fullName=" + fullName + ", " : "") +
-                (nationalId != null ? "nationalId=" + nationalId + ", " : "") +
+                (lastName != null ? "lastName=" + lastName + ", " : "") +
+                (familyName != null ? "familyName=" + familyName + ", " : "") +
+                (nationalID != null ? "nationalID=" + nationalID + ", " : "") +
+                (passportNo != null ? "passportNo=" + passportNo + ", " : "") +
                 (passportIssueCountry != null ? "passportIssueCountry=" + passportIssueCountry + ", " : "") +
-                (passportKey != null ? "passportKey=" + passportKey + ", " : "") +
-                (trafficUnitCode != null ? "trafficUnitCode=" + trafficUnitCode + ", " : "") +
+                (licenseType != null ? "licenseType=" + licenseType + ", " : "") +
+                (trafficUnit != null ? "trafficUnit=" + trafficUnit + ", " : "") +
                 (birthDate != null ? "birthDate=" + birthDate + ", " : "") +
-                (licenceExpiryDate != null ? "licenceExpiryDate=" + licenceExpiryDate + ", " : "") +
-                (licenceTypeAr != null ? "licenceTypeAr=" + licenceTypeAr + ", " : "") +
-                (licenceTypeEn != null ? "licenceTypeEn=" + licenceTypeEn + ", " : "") +
-                (licenceStatusAr != null ? "licenceStatusAr=" + licenceStatusAr + ", " : "") +
-                (licenceStatusEn != null ? "licenceStatusEn=" + licenceStatusEn + ", " : "") +
-                (licenceStatus != null ? "licenceStatus=" + licenceStatus + ", " : "") +
-                (applicantId != null ? "applicantId=" + applicantId + ", " : "") +
-                (userId != null ? "userId=" + userId + ", " : "") +
-                (centerId != null ? "centerId=" + centerId + ", " : "") +
             "}";
     }
 
